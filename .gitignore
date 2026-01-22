@@ -1,0 +1,12 @@
+# Environments
+.env
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log
+
+# Local data
+sessions/
+media/
