@@ -10,13 +10,9 @@ This project sets up the [WAHA (WhatsApp HTTP API)](https://waha.devlike.pro/) u
 ## Setup
 
 1.  **Clone the repository or download the files.**
-2.  **Create a `.env` file from the example:**
+2.  **Review the existing `.env` file:**
 
-    ```bash
-    cp env.example .env
-    ```
-
-3.  **Configure your `.env` file:**
+3.  **Adjust your `.env` file if needed:**
 
     Open the `.env` file and fill in the required environment variables, such as `WAHA_API_KEY`, `WAHA_DASHBOARD_USERNAME`, and `WAHA_DASHBOARD_PASSWORD`. You can generate strong random values for these.
 
@@ -29,7 +25,13 @@ This project sets up the [WAHA (WhatsApp HTTP API)](https://waha.devlike.pro/) u
 1.  **Start the services:**
 
     ```bash
-    docker-compose up -d
+    make deploy-waha
+    ```
+
+    Or, if you're not using the repository Makefile:
+
+    ```bash
+    docker compose up -d
     ```
 
 2.  **Access the WAHA Dashboard:**
@@ -65,3 +67,8 @@ docker-compose down
 
 -   **Sessions:** Session data is stored in the `sessions` directory, mounted as a volume.
 -   **Media:** Media files are stored in the `media` directory, mounted as a volume.
+
+## Notes for this repository
+
+-   The stack is designed to join the external `n8n` network used by the other services in this monorepo.
+-   The root `make deploy` target already creates the `n8n` network before deploying `waha`.
