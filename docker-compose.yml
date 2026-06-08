@@ -6,8 +6,6 @@ services:
     # dns:
     #   - 1.1.1.1
     #   - 8.8.8.8
-    ports:
-      - '3000:3000'
     volumes:
       # Store sessions in the .sessions folder (comment it if you're using MongoDB)
       - waha_sessions:/app/.sessions
@@ -44,11 +42,16 @@ services:
         max_attempts: 3
 
     networks:
-      - n8n
+      n8n:
+      traefik-local:
+        aliases:
+          - waha
 
 
 networks:
   n8n:
+    external: true
+  traefik-local:
     external: true
 
 volumes:

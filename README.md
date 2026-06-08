@@ -36,7 +36,7 @@ This project sets up the [WAHA (WhatsApp HTTP API)](https://waha.devlike.pro/) u
 
 2.  **Access the WAHA Dashboard:**
 
-    Open your browser and navigate to `http://localhost:3000` (or the `WAHA_BASE_URL` you configured). You should see the WAHA dashboard.
+    Open your browser and navigate to `http://waha.localnetwork:8181` on the LAN or `http://localhost:3000` if you are testing the container directly. You should see the WAHA dashboard.
 
 3.  **Access the Swagger UI:**
 
@@ -70,5 +70,5 @@ docker-compose down
 
 ## Notes for this repository
 
--   The stack is designed to join the external `n8n` network used by the other services in this monorepo.
--   The root `make deploy` target already creates the `n8n` network before deploying `waha`.
+-   The stack is designed to join the external `n8n` network used by the other services in this monorepo and the external `traefik-local` network for LAN-only access.
+-   The root `make deploy` target already creates the `n8n` and `traefik-local` networks before deploying `waha`.
