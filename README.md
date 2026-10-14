@@ -36,7 +36,7 @@ This project sets up the [WAHA (WhatsApp HTTP API)](https://waha.devlike.pro/) u
 
 2.  **Access the WAHA Dashboard:**
 
-    Open your browser and navigate to `http://waha.localnetwork:8181` on the LAN or `http://localhost:3000` if you are testing the container directly. You should see the WAHA dashboard.
+    Open your browser and navigate to `http://waha.localnetwork` on the LAN or `http://localhost:3000` if you are testing the container directly. You should see the WAHA dashboard.
 
 3.  **Access the Swagger UI:**
 
