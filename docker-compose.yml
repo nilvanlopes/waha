@@ -1,6 +1,6 @@
 services:
   waha:
-    image: devlikeapro/waha:latest@sha256:d52ad4f394d2e48eb92d58e0f04924ff6c7621a883d08ff64176479ecd77c9ca
+    image: devlikeapro/waha:latest@sha256:280bdc8f860267a2488a45d00ec88529646f7468c0bf0283c595d6efdd1b5e3b
 
     # Add "dns" if you have a problem with resolving "web.whatsapp.com"
     # dns:
